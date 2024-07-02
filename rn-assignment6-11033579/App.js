@@ -1,25 +1,24 @@
-import React  from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import CartScreen from './Screens/CartScreen';  
+import { StyleSheet, View } from 'react-native';
+import HomeScreen from './Screens/Homescreen';  
 
-import { StyleSheet, Text, View } from 'react-native';
-import Homescreen from './Screens/Homescreen';
-
-const  App=()=> {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Homescreen/>
-      <NavigationContainer>
-        
-      </NavigationContainer>
-      
+      <HomeScreen />
+      <CartScreen />
     </View>
   );
-}
-export default  App
+};
+
+export default App;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop:50
+    marginTop: 50,
   },
 });
+

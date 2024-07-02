@@ -3,11 +3,12 @@ import React from 'react'
 
 const Secondscreen = () => {
   return (
-    <View>
-      <View>
+    <View style={{flex:1,marginBottom:20}}>
+  
+      <View style={{flexDirection:'row-reverse',marginRight:50}}>
         <Image source={require('../assets/Listview.png')}/>
       </View>
-      <View>
+      <View style={{flexDirection:'row-reverse',marginRight:20}}>
         <Image source={require('../assets/Filter.png')}/>
       </View>
     </View>

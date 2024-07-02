@@ -18,6 +18,8 @@ const Firstscreen = () => {
       <View style={{flexDirection:'row-reverse',marginRight:20}}>
         <Image source={require('../assets/shoppingBag.png')}/>
       </View>
+      
+      
     </View>
   )
 }
@@ -28,6 +30,7 @@ const styles=StyleSheet.create({
         flex:1,
         justifyContent:'space-between',
         marginLeft:20,
-        marginBottom:70
+        marginBottom:70,
+        alignContent:'space-between'
     }
 })
