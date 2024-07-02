@@ -19,5 +19,5 @@ View Products: Users can view a list of available products on the HomeScreen.
 Add to Cart: Users can add products to their cart from the HomeScreen using the "Add to Cart" button.
 Remove from Cart: Users can remove products from their cart on the CartScreen using the "Remove from Cart" button.
 View Cart: Users can view the items currently in their cart on the CartScreen.
-![Screenshot of My App](screenshots/screenshot.png)
+![Screenshot of My App](./assets/screenshot.jpg)
 
