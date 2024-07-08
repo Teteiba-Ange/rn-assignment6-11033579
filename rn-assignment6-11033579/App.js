@@ -1,24 +1,35 @@
+// App.js
 import React from 'react';
-import CartScreen from './Screens/CartScreen';  
-import { StyleSheet, View } from 'react-native';
-import HomeScreen from './Screens/Homescreen';  
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import HomeScreen from './Screens/HomeScreen';
+import ProductDetailScreen from './Screens/ProductDetailScreen';
+import CartScreen from './Screens/CartScreen';
+import DrawerContent from './components/DrawerContent';
+
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
+
+const HomeStack = () => (
+  <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+  </Stack.Navigator>
+);
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <HomeScreen />
-      <CartScreen />
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
+        <Drawer.Screen name="HomeStack" component={HomeStack} />
+        <Drawer.Screen name="CartScreen" component={CartScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 };
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    marginTop: 50,
-  },
-});
+
 
